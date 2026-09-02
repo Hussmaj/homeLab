@@ -18,4 +18,4 @@ Restarte Pc'en. Det tok litt tid og restarte den igjen så jeg lurer på om det 
 - Skrive en README fil slik at folk kan se hva prosjektet mitt dreier seg om.
 - Gjør repoet til public slik at arbeidsgivere kan se
 - Gjøre teori arbeidsloggene mine til privat. 
-- Lage en egen mappe for utført arbeid i detalj.
+- Lage en egen mappe for utført arbeid i detalj eller skrive i kommentarer i selve koden og teori kan jeg koble til med lenker, en snarvei eller noe likt.
