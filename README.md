@@ -2,8 +2,7 @@
 
 #Forklaring av lab
 
-Denne labben går ut på å lære viktige fundamenter innen Nettverk og oppsett av nettverkstjenster og hvordan de kommuniserer med hverandre. 
-
+Denne labben går ut på å lære viktige fundamenter innen Nettverk og oppsett av nettverkstjenster.
 - DNS
 - DHCP
 - Subnetting: CIDR
