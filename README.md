@@ -23,7 +23,7 @@ Denne labben går ut på å lære viktige fundamenter innen nettverk og oppsett 
 
     - Grunnleggende sikkerhetstiltak
 
-    - Brannmur og tilgangskontroll*
+    - Brannmur og tilgangskontroll
 
 ## Lærings mål:
 
