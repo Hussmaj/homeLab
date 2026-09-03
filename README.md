@@ -1,29 +1,29 @@
 # Nettverk Hjemme Lab
 
 ## Forklaring av lab
-Nettverk – grunnleggende nettverkstjenester og konsepter
+**Nettverk – grunnleggende nettverkstjenester og konsepter**
 
 Denne labben går ut på å lære viktige fundamenter innen nettverk og oppsett av nettverkstjenester.
 
-DNS – Domain Name System
+**-DNS** – Domain Name System
 
-DHCP – Dynamic Host Configuration Protocol
+**-DHCP** – Dynamic Host Configuration Protocol
 
-Subnetting – CIDR og IP-adressering
+**-Subnetting** – CIDR og IP-adressering
 
-HTTP vs. HTTPS – kommunikasjon over nettverk
+**-HTTP vs. HTTPS** – kommunikasjon over nettverk
 
-NAT – Network Address Translation
+**-NAT** – Network Address Translation
+    - Private 
+    - Offentlige IP-adresser
 
-Private og offentlige IP-adresser
+**-OSI- og TCP/IP-modellen**
 
-OSI- og TCP/IP-modellen
+**-Nettverkssikkerhet**
 
-Nettverkssikkerhet
+    - Grunnleggende sikkerhetstiltak
 
-Grunnleggende sikkerhetstiltak
-
-Brannmur og tilgangskontroll
+    - Brannmur og tilgangskontroll*
 
 ## Lærings mål:
 
