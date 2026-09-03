@@ -18,3 +18,8 @@ Denne labben går ut på å lære viktige fundamenter innen Nettverk og oppsett 
 
 Sette på VM'er og få dem til å kommunisere med hverandre
 
+## Resultater: 
+
+
+
+
