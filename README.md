@@ -37,6 +37,11 @@ Det ble også avklart at webserveren ikke nødvendigvis trenger å kunne pinge W
 
 Prinsippet videre er å begrense unødvendige åpninger i nettverket. Færre åpne porter og tjenester gir en mindre angrepsflate og dermed bedre sikkerhet.
 
+## Illustrasjon av arkitekturen:
+
+<img width="1663" height="1639" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/f8857e22-31d2-4773-8b70-af490c2cba32" />
+
+
 
 
 
