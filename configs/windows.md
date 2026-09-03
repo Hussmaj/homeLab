@@ -11,7 +11,7 @@
 
 
 ## Firewall regler
-**ICMP allowed from 192.168.10.10 (Webserver)**
+**Ping allowed from and to 192.168.10.10(Webserver)**
 
 - Kjørt kommandoen: netsh advfirewall firewall add rule name="Allow Ping from Ubuntu" protocol=icmpv4:8,any dir=in action=allow remoteip=192.168.10.10
 
