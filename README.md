@@ -6,14 +6,23 @@ Nettverk – grunnleggende nettverkstjenester og konsepter
 Denne labben går ut på å lære viktige fundamenter innen nettverk og oppsett av nettverkstjenester.
 
 DNS – Domain Name System
+
 DHCP – Dynamic Host Configuration Protocol
+
 Subnetting – CIDR og IP-adressering
+
 HTTP vs. HTTPS – kommunikasjon over nettverk
+
 NAT – Network Address Translation
+
 Private og offentlige IP-adresser
+
 OSI- og TCP/IP-modellen
+
 Nettverkssikkerhet
+
 Grunnleggende sikkerhetstiltak
+
 Brannmur og tilgangskontroll
 
 ## Lærings mål:
