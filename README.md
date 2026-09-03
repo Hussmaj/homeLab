@@ -14,7 +14,9 @@ Denne labben går ut på å lære viktige fundamenter innen nettverk og oppsett 
 **-HTTP vs. HTTPS** – kommunikasjon over nettverk
 
 **-NAT** – Network Address Translation
+
     - Private 
+    
     - Offentlige IP-adresser
 
 **-OSI- og TCP/IP-modellen**
