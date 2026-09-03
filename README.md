@@ -1,6 +1,6 @@
-**Nettverk Hjemme Lab**
+# Nettverk Hjemme Lab
 
-#Forklaring av lab
+## Forklaring av lab
 
 Denne labben går ut på å lære viktige fundamenter innen Nettverk og oppsett av nettverkstjenster.
 - DNS
@@ -14,7 +14,7 @@ Denne labben går ut på å lære viktige fundamenter innen Nettverk og oppsett 
 - Sikkerhets tilltak
 
 
-#Lærings mål:
+## Lærings mål:
 
 Sette på VM'er og få dem til å kommunisere med hverandre
 
