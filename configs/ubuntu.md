@@ -6,11 +6,13 @@
 - Ping gateway: ✓
   
 ping allowed to 192.168.10.1 (Gateway)
+
 <img width="519" height="163" alt="image" src="https://github.com/user-attachments/assets/30ecffa1-7c41-42f9-b164-697114ce8acb" />
 
 - Ping klient: ✓
   
 ping allowed to 192.168.10.100 (Klient)
+
 <img width="555" height="164" alt="image" src="https://github.com/user-attachments/assets/b19d2eb2-f20f-4695-ad8f-0abe0c4505a8" />
 
 ## Firewall
