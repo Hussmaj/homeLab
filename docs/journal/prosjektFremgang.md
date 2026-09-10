@@ -14,36 +14,60 @@ Det interne LAN nettverket er sattopp bak pfSense og NAT brukes til å kommunise
 
 ***Satt opp slik:***
 
-             INTERNETT
-                 │
-              NAT/WAN
-                 │
-              pfSense
-                 │
-                LAN
-          ┌──────┴──────┐
-          │             │
-       Klient       Webserver
+                   INTERNETT
+                       │
+                    NAT/WAN
+                       │
+                    pfSense
+                       │
+                      LAN
+                ┌──────┴──────┐
+                │             │
+            Klient        Webserver
 
-**Versjon-2**
+**Versjon-1.5**
 
-Startet: 09.08.2026
-Ferdig:
-
+Startet 09.08.2026
+Ferdig 09.10.2026
 
 ***Satt opp slik:*** 
 
+                    Internet
+                       │
+                 VirtualBox NAT
+                       │
+                 pfSense WAN
+                  10.0.2.15
+                       │
+                 ┌─────┴─────┐
+                 │           │
+                LAN       VLAN 10
+                 │           │
+         192.168.10.0/24   192.168.20.0/24
+                 │           │
+                 │           │
+              Windows      Ubuntu
+         192.168.10.100  192.168.20.10*
 
-                         INTERNETT
-                             │
-                         VirtualBox
-                           NAT
-                             │
-                         pfSense
-                             │
-                    ┌────────┴────────┐
-                    │                 │
-                 VLAN 10           VLAN 20
-                 Klienter           Servere
-                    │                 │
-                 Klient            Webserver
+
+**Sluttmål**
+
+
+***Illustrasjon*** 
+
+
+                   INTERNETT
+                       │
+                  VirtualBox
+                      NAT
+                       │
+                    pfSense
+                       │
+              ┌────────┴────────┐
+              │                 │
+            VLAN 10           VLAN 20
+            Klienter           Servere
+              │                 │
+            Klient            Webserver
+
+
