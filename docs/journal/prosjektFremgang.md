@@ -1,6 +1,7 @@
 # Prosjektets fremgang
 
-Her så skriver jeg ned hvilken versjon av prosjektet jeg er på nå og forklarer forskjellen fra den ene til den andre.
+Her oppdaterer jeg arkitekturen i prosjektet med forskjellige versjon-nr. 
+Viser fremgangen i prosjektet.
 
 
 **Versjon-1**
