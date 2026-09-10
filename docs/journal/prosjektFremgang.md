@@ -31,7 +31,7 @@ Det interne LAN nettverket er sattopp bak pfSense og NAT brukes til å kommunise
 Startet 09.08.2026
 Ferdig 09.10.2026
 
-***Satt opp slik:*** 
+***Skal se slik ut opp slik:*** 
 
                     Internet
                        │
@@ -70,5 +70,22 @@ Ferdig 09.10.2026
             Klienter           Servere
               │                 │
             Klient            Webserver
+
+
+
+
+                         INTERNETT
+                             │
+                         VirtualBox
+                           NAT
+                             │
+                         pfSense
+                             │
+                    ┌────────┴────────┐
+                    │                 │
+                 VLAN 10           VLAN 20
+                 Klienter           Servere
+                    │                 │
+                 Klient            Webserver
 
 
