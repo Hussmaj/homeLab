@@ -96,7 +96,7 @@ Windows Client                    Ubuntu Server
                                        ▼
                                   192.168.20.100
 
-```text
+```
 
 **Sluttmål**
 
