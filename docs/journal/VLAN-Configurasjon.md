@@ -1,8 +1,6 @@
-Før og etter /etc/netplan/50-cloud-init.yaml
+**Dato: 11.09.2026**
 
-Før redigering
-
-<img width="777" height="234" alt="image" src="https://github.com/user-attachments/assets/6f9e3f38-b613-4cd7-8738-b85980af9bb5" />
+Laget en kompi av 50-cloud-init.yaml som heter 50-cloud-init.yaml.backup
 
 
-Etter: 
+
