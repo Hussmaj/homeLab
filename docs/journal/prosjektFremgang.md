@@ -60,6 +60,8 @@ Fått en permanent VLAN 10-konfigurasjon på Ubuntu, DHCP fra pfSense og utgåen
 
 ***Satt opp slik:***
 
+```text
+
                     INTERNET
                        │
                        │
@@ -94,7 +96,7 @@ Windows Client                    Ubuntu Server
                                        ▼
                                   192.168.20.100
 
-
+```text
 
 **Sluttmål**
 
