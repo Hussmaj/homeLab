@@ -31,7 +31,7 @@ Det interne LAN nettverket er sattopp bak pfSense og NAT brukes til å kommunise
 Startet 09.08.2026
 Ferdig 09.10.2026
 
-***Skal se slik ut opp slik:*** 
+***Satt opp slik:***
 
                     Internet
                        │
@@ -55,6 +55,10 @@ Ferdig 09.10.2026
 
 Starter 09.11.2026 kl:10:15
 Ferdig: 09.11.2026 kl:16:25
+
+Fått en permanent VLAN 10-konfigurasjon på Ubuntu, DHCP fra pfSense og utgående Internett-tilgang. Neste gang jeg skrur på maskinene, så vill ikke IP-addressen være borte.
+
+***Satt opp slik:***
 
                     INTERNET
                        │
@@ -91,8 +95,8 @@ Windows Client                    Ubuntu Server
                                   192.168.20.100
 
 
-**Sluttmål**
 
+**Sluttmål**
 
 ***Illustrasjon*** 
 
