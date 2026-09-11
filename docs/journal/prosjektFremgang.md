@@ -49,6 +49,46 @@ Ferdig 09.10.2026
                  │           │
               Windows      Ubuntu
          192.168.10.100  192.168.20.10*
+         
+
+**Versjon-2**
+
+Starter 09.11.2026 kl:10:15
+Ferdig: 09.11.2026 kl:16:25
+
+                    INTERNET
+                       │
+                       │
+                  VirtualBox NAT
+                   10.0.2.0/24
+                       │
+                       │
+                   pfSense WAN
+                   10.0.2.15/24
+                       │
+            ┌──────────┴──────────┐
+            │                     │
+            │       pfSense       │
+            │                     │
+            │  LAN: 192.168.10.1  │
+            │SERVERS: 192.168.20.1│
+            │                     │
+            └──────────┬──────────┘
+                       │
+       ┌───────────────┴───────────────┐
+       │                               │
+ VirtualBox LAN                 VirtualBox VLAN-LAB
+       │                               │
+   LAN / Klientnett                 VLAN-trafikk
+   192.168.10.0/24                  VLAN ID 10
+       │                               │
+       │                               │
+Windows Client                    Ubuntu Server
+192.168.10.100                    vlan10
+                                       │
+                                       │ DHCP
+                                       ▼
+                                  192.168.20.100
 
 
 **Sluttmål**
@@ -70,22 +110,5 @@ Ferdig 09.10.2026
             Klienter           Servere
               │                 │
             Klient            Webserver
-
-
-
-
-                         INTERNETT
-                             │
-                         VirtualBox
-                           NAT
-                             │
-                         pfSense
-                             │
-                    ┌────────┴────────┐
-                    │                 │
-                 VLAN 10           VLAN 20
-                 Klienter           Servere
-                    │                 │
-                 Klient            Webserver
 
 
