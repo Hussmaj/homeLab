@@ -54,7 +54,7 @@ pfSense ble konfigurert som gateway og brannmur for labben.
 
 IP-adresse: 192.168.10.1/24
 
-DHCP ble aktivert på LAN-nettverket med følgende adresseområde:
+**DHCP ble aktivert på LAN-nettverket med følgende adresseområde:**
 
 192.168.10.100 – 192.168.10.200
 
@@ -93,7 +93,7 @@ Dette gjør at klient- og servernettverket er logisk adskilt.
 
 Det ble konfigurert brannmurregler i pfSense for å tillate nødvendig trafikk.
 
-Blant annet ble det opprettet regler for:
+**Blant annet ble det opprettet regler for:**
 
 * Kommunikasjon fra VLAN 10 til pfSense
 
@@ -107,13 +107,73 @@ Et viktig prinsipp i labben er at trafikk ikke skal tillates automatisk uten at 
 
 Apache2 ble installert på Ubuntu Server for å sette opp en enkel webserver.
 
-## Resultater: 
+## Testing
 
-Nettverket fungerer. Klienten kan kommunisere med pfSense, webserveren og internett. Routing og DHCP fungerer, og Apache-serveren kan nås fra klienten.
+**Følgende tester ble brukt for å kontrollere nettverket:**
 
-Det ble også avklart at webserveren ikke nødvendigvis trenger å kunne pinge Windows-klienten. Windows Firewall kan blokkere ICMP-trafikk, og dette betyr ikke at nettverket er feil konfigurert.
+* Ping fra Windows-klienten til pfSense
 
-Prinsippet videre er å begrense unødvendige åpninger i nettverket. Færre åpne porter og tjenester gir en mindre angrepsflate og dermed bedre sikkerhet.
+* Ping fra Ubuntu Server til pfSense
+
+* Kontroll av IP-adresser med ip addr
+
+* Kontroll av routing med ip route
+
+* Kontroll av valgt rute med ip route get
+
+* Test av Internett-tilgang med ping 8.8.8.8
+
+* Test av DNS-oppslag med domenenavn som google.com
+
+Tilgang til Apache-webserveren fra Windows-klienten
+
+## Resultater
+
+**Labben har gitt et fungerende virtuelt nettverk med:**
+
+* pfSense som gateway og brannmur
+
+* Et separat LAN-nettverk for klienter
+
+* Et separat servernettverk med VLAN 10
+
+* DHCP på både LAN og servernettverket
+
+* Routing og Internett-tilgang fra Ubuntu Server
+
+* Permanent VLAN-konfigurasjon i Ubuntu med Netplan
+
+* Apache Webserver på Ubuntu Server
+
+* Grunnleggende brannmurregler og tilgangskontroll
+
+Underveis ble det også feilsøkt problemer med DHCP, VLAN-tagging, brannmurregler og routing. Dette ga praktisk erfaring med hvordan man finner årsaken til nettverksproblemer i stedet for å bare kontrollere om en forbindelse fungerer.
+
+## Teknologier
+
+* VirtualBox
+
+* pfSense
+
+* Ubuntu Server
+
+* Windows
+
+* VLAN / 802.1Q
+
+* IPv4
+
+* DHCP
+
+* DNS
+
+* Routing
+
+* Firewall
+
+* Apache2
+
+* Netplan
 
 ## Illustrasjon av arkitekturen:
 
