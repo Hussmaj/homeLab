@@ -38,11 +38,11 @@ Sette på VM'er og få dem til å kommunisere med hverandre
 
 Jeg startet med å opprette virtuelle maskiner i VirtualBox:
 
-pfSense
+* pfSense
 
-Windows-klient
+* Windows-klient
 
-Ubuntu Server
+* Ubuntu Server
 
 pfSense fikk ett nettverkskort mot WAN og ett mot det interne LAN-nettverket. Windows-klienten ble koblet til et internt VirtualBox-nettverk kalt LAN.
 
@@ -95,11 +95,11 @@ Det ble konfigurert brannmurregler i pfSense for å tillate nødvendig trafikk.
 
 Blant annet ble det opprettet regler for:
 
-Kommunikasjon fra VLAN 10 til pfSense
+* Kommunikasjon fra VLAN 10 til pfSense
 
-Utgående trafikk fra servernettverket
+* Utgående trafikk fra servernettverket
 
-Testing av forbindelse mellom nettverkene
+* Testing av forbindelse mellom nettverkene
 
 Et viktig prinsipp i labben er at trafikk ikke skal tillates automatisk uten at det finnes en relevant brannmurregel. Dette viser hvordan pfSense kan brukes til å kontrollere tilgang mellom nettverk.
 
