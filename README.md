@@ -1,31 +1,32 @@
 # Nettverk Hjemme Lab
 
-## Forklaring av lab
-**Nettverk – grunnleggende nettverkstjenester og konsepter**
+## Om labben
+
+Dette prosjektet er en virtuell hjemmelab laget for å lære og teste grunnleggende nettverk, nettverkstjenester og sikkerhet.
+
+Labben bruker VirtualBox til å kjøre flere virtuelle maskiner. pfSense fungerer som gateway og brannmur, mens Windows brukes som klient og Ubuntu Server brukes som servermiljø.
 
 Denne labben går ut på å lære viktige fundamenter innen nettverk og oppsett av nettverkstjenester.
 
-**-DNS** – Domain Name System
+## Målet med labben er å få praktisk erfaring med:
 
-**-DHCP** – Dynamic Host Configuration Protocol
+* Oppsett av virtuelle nettverk
 
-**-Subnetting** – CIDR og IP-adressering
+* IPv4-adressering og subnetting
 
-**-HTTP vs. HTTPS** – kommunikasjon over nettverk
+* DHCP og DNS
 
-**-NAT** – Network Address Translation
+* Routing mellom nettverk
 
-    - Private 
-    
-    - Offentlige IP-adresser
+* VLAN og nettverkssegmentering
 
-**-OSI- og TCP/IP-modellen**
+* Brannmurregler og tilgangskontroll
 
-**-Nettverkssikkerhet**
+* Internett-tilgang fra interne nettverk
 
-    - Grunnleggende sikkerhetstiltak
+* Webservere med Apache
 
-    - Brannmur og tilgangskontroll
+* Feilsøking og dokumentasjon av nettverk
 
 ## Lærings mål:
 
