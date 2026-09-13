@@ -101,8 +101,6 @@ Det ble konfigurert brannmurregler i pfSense for å tillate nødvendig trafikk.
 
 * Testing av forbindelse mellom nettverkene
 
-Et viktig prinsipp i labben er at trafikk ikke skal tillates automatisk uten at det finnes en relevant brannmurregel. Dette viser hvordan pfSense kan brukes til å kontrollere tilgang mellom nettverk.
-
 ### 6. Apache Webserver
 
 Apache2 ble installert på Ubuntu Server for å sette opp en enkel webserver.
