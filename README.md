@@ -36,7 +36,7 @@ Sette på VM'er og få dem til å kommunisere med hverandre
 
 ### 1. Oppsett av virtuelle maskiner
 
-Jeg startet med å opprette virtuelle maskiner i VirtualBox:
+**Jeg startet med å opprette virtuelle maskiner i VirtualBox:**
 
 * pfSense
 
@@ -50,7 +50,7 @@ pfSense fikk ett nettverkskort mot WAN og ett mot det interne LAN-nettverket. Wi
 
 pfSense ble konfigurert som gateway og brannmur for labben.
 
-LAN-interfacet ble satt til:
+**LAN-interfacet ble satt til:**
 
 IP-adresse: 192.168.10.1/24
 
@@ -64,14 +64,14 @@ Dette gjorde at klienter på LAN-nettverket kunne få IP-adresse automatisk.
 
 Ubuntu Server ble først koblet til LAN-nettverket og konfigurert med en IP-adresse i 192.168.10.0/24.
 
-Senere ble serveren flyttet til et eget servernettverk basert på VLAN 10. Ubuntu ble konfigurert til å bruke et VLAN-interface:
+Senere ble serveren flyttet til et eget servernettverk basert på VLAN 10. 
+
+**Ubuntu ble konfigurert til å bruke et VLAN-interface:**
 
 vlan10
 VLAN-ID: 10
 
-VLAN-interfacet mottar IP-adresse fra DHCP-serveren på pfSense:
-
-192.168.20.0/24
+VLAN-interfacet mottar IP-adresse fra DHCP-serveren på pfSense: 192.168.20.0/24
 
 Netplan ble brukt for å gjøre VLAN-konfigurasjonen permanent, slik at den også fungerer etter omstart.
 
@@ -79,7 +79,7 @@ Netplan ble brukt for å gjøre VLAN-konfigurasjonen permanent, slik at den ogs�
 
 For å skille klienter og servere ble det opprettet et eget servernettverk med VLAN 10.
 
-Servernettverket bruker:
+**Servernettverket bruker:**
 
 Nettverk: 192.168.20.0/24
 Gateway: 192.168.20.1
