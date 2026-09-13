@@ -175,12 +175,6 @@ Underveis ble det også feilsøkt problemer med DHCP, VLAN-tagging, brannmurregl
 
 * Netplan
 
-## Illustrasjon av arkitekturen:
-
-<img width="1663" height="1639" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/f8857e22-31d2-4773-8b70-af490c2cba32" />
-
-
-
 
 
 
