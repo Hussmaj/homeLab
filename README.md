@@ -6,7 +6,7 @@ Dette prosjektet er en virtuell hjemmelab laget for å lære og teste grunnlegge
 
 Labben bruker VirtualBox til å kjøre flere virtuelle maskiner. pfSense fungerer som gateway og brannmur, mens Windows brukes som klient og Ubuntu Server brukes som servermiljø.
 
-Denne labben går ut på å lære viktige fundamenter innen nettverk og oppsett av nettverkstjenester.
+Jeg arbeider med denne labben for å lære viktige fundamenter innen nettverk og oppsett av nettverkstjenester.
 
 ## Målet med labben er å få praktisk erfaring med:
 
