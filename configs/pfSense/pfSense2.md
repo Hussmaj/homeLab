@@ -17,6 +17,8 @@
 
 **Ubuntu Server:** 192.168.20.100 Dette er IP-adressen Ubuntu Server får fra DHCP-serveren på VLAN 10. Serveren bruker VLAN 10 for å kommunisere med pfSense og andre nettverk.
 
+OPT1 har ingen IP-adresse fordi det bare er det fysiske parent-interfacet som brukes til VLAN-konfigurasjonen.
+
 ### Trafikken beveger seg slik:
 
 ```text
