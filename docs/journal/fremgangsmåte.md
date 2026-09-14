@@ -1,0 +1,22 @@
+# Fremgang dag for dag
+
+
+## D.D: 09.14.2026
+
+### Status for i dag
+
+**I dag har vi:**
+
+* Gått gjennom de eksisterende brannmurreglene på SERVERS.
+
+* Identifisert den brede, midlertidige regelen som tillater all utgående trafikk.
+
+* Opprettet en mer spesifikk DNS-regel.
+
+* Testet DNS fra Ubuntu med nslookup.
+
+* Bekreftet med resolvectl status at Ubuntu bruker pfSense på 192.168.20.1 som DNS-server.
+
+* Beholdt den midlertidige utgående regelen slik at labben fortsatt fungerer som normalt.
+
+* Neste gang: Fortsette med HTTPS-regelen, teste den og gradvis erstatte den midlertidige regelen med mer spesifikke brannmurregler.
