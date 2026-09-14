@@ -4,7 +4,7 @@
 
 <img width="694" height="122" alt="image" src="https://github.com/user-attachments/assets/fa10a579-a1bb-4fa9-a9e4-b05b167ec151" />
 
-Trafikken beveger seg slik:
+### Trafikken beveger seg slik:
 
 ```text
 Ubuntu Server
