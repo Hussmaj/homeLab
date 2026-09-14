@@ -2,7 +2,7 @@
 
 ## Oppdaterte IP-Adresser:
 
-<img width="694" height="122" alt="image" src="https://github.com/user-attachments/assets/fa10a579-a1bb-4fa9-a9e4-b05b167ec151" />
+<img width="720" height="131" alt="image" src="https://github.com/user-attachments/assets/63c3e035-acca-48db-8686-ea8430c137f5" />
 
 
 ## Forklaring av IP-adressene:
