@@ -6,7 +6,7 @@
 
 Trafikken beveger seg slik:
 
-```tesxt
+```text
 Ubuntu Server
    │
 VLAN 10-tagget trafikk
