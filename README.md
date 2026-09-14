@@ -10,7 +10,7 @@ Denne labben går ut på å lære viktige fundamenter innen nettverk og oppsett 
 
 ## Målet med labben er å få praktisk erfaring med:
 
-* Oppsett av virtuelle nettverk
+* Oppsett av virtuelle nettverk/labber
 
 * IPv4-adressering og subnetting
 
