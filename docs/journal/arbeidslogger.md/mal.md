@@ -6,6 +6,8 @@
 
 ## Dagens mål: 
 
+### Forventet resultat
+
 ## Fremgangsmåte
 
 ## Status og Resulateter: 
