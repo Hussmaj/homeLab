@@ -98,23 +98,77 @@ Windows Client                    Ubuntu Server
 
 ```
 
-**Sluttmål**
 
-***Illustrasjon*** 
+**Versjon-2.5**
 
+Startet: 09.15.2026
+Ferdig: 09.18.2026
 
-                   INTERNETT
-                       │
-                  VirtualBox
-                      NAT
-                       │
-                    pfSense
-                       │
-              ┌────────┴────────┐
-              │                 │
-            VLAN 10           VLAN 20
-            Klienter           Servere
-              │                 │
-            Klient            Webserver
+***Satt opp slik:***
+
+                         INTERNET
+                            │
+                            │
+                     VirtualBox NAT
+                            │
+                            │
+                       pfSense WAN
+                            │
+                    ┌───────┴────────┐
+                    │                │
+                    │    pfSense     │
+                    │                │
+                    │ LAN:           │
+                    │ 192.168.10.1   │
+                    │                │
+                    │ VLAN 10:        │
+                    │ 192.168.20.1   │
+                    │ SERVERS        │
+                    │                │
+                    │ VLAN 20:        │
+                    │ 192.168.30.1   │
+                    │ CLIENTS        │
+                    │                │
+                    └───────┬────────┘
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+              │                           │
+       VirtualBox LAN              VirtualBox VLAN-LAB
+              │                           │
+       Administrasjonsnett             VLAN-trunk
+       192.168.10.0/24                 VLAN 10, 20, 30
+              │                           │
+              │                           │
+       Windows-klient                SWITCH-OVS
+       192.168.10.100                Open vSwitch
+       Administrasjon                     │
+                                          │
+                                   enp0s8 – trunk
+                                   VLAN 10, 20, 30
+                                          │
+                                          │
+                                   enp0s9 – access
+                                   VLAN 20
+                                          │
+                                          │
+                                   CLIENTS-ACCESS
+                                          │
+                                          │
+                                   Windows-klient
+                                   VLAN 20
+                                   192.168.30.100
+                                   DHCP
+
+### pfSense oppsett: 
+
+```text
+WAN  → VirtualBox NAT
+LAN  → LAN
+em0  → VLAN-LAB
+
+VLAN 10 → SERVERS → 192.168.20.1/24
+VLAN 20 → CLIENTS → 192.168.30.1/24
+```
 
 
