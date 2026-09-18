@@ -171,4 +171,34 @@ VLAN 10 → SERVERS → 192.168.20.1/24
 VLAN 20 → CLIENTS → 192.168.30.1/24
 ```
 
+### SWITCH-OVS oppsett:
+```text
+enp0s3 → LAN
+         Administrasjon
+         192.168.10.102
+
+enp0s8 → VLAN-LAB
+         Trunk
+         VLAN 10, 20, 30
+
+enp0s9 → CLIENTS-ACCESS
+         Access-port
+         VLAN 20
+```
+### Klienter og servere oppsett:
+```text
+Windows administrasjonsforbindelse
+└── LAN
+    └── 192.168.10.100
+
+Windows klientforbindelse
+└── CLIENTS-ACCESS
+    └── VLAN 20
+        └── 192.168.30.100 via DHCP
+
+Ubuntu Server
+└── VLAN 10
+    └── 192.168.20.100 via DHCP
+```
+
 
