@@ -42,7 +42,7 @@ Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som g
           Ubuntu Server            Windows
           VLAN 10                  VLAN 20
           192.168.20.100           192.168.30.100
-
+```
 
 | Nettverk | VLAN | Subnett | Gateway | Bruk |
 |---|---:|---|---|---|
@@ -59,12 +59,14 @@ Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som g
 | DMZ      |   30 | -                 | -              | Planlagt       |
 
 ```text
+
 | Nettverk | VLAN | Subnett | Gateway | Bruk |
 |---|---:|---|---|---|
 | LAN | - | `192.168.10.0/24` | `192.168.10.1` | Administrasjon |
 | SERVERS | 10 | `192.168.20.0/24` | `192.168.20.1` | Servere |
 | CLIENTS | 20 | `192.168.30.0/24` | `192.168.30.1` | Klienter |
 | DMZ | 30 | - | - | Planlagt |
+
 ```
 ## Komponenter
 * VirtualBox – virtualisering og virtuelle nettverk  
