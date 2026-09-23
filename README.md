@@ -49,7 +49,15 @@ Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som g
 | LAN | - | `192.168.10.0/24` | `192.168.10.1` | Administrasjon |
 | SERVERS | 10 | `192.168.20.0/24` | `192.168.20.1` | Servere |
 | CLIENTS | 20 | `192.168.30.0/24` | `192.168.30.1` | Klienter |
-| DMZ | 30 | - | - | Planlagt |  
+| DMZ | 30 | - | - | Planlagt |
+
+| Nettverk | VLAN | Subnett           | Gateway        | Bruk           |
+| -------- | ---: | ----------------- | -------------- | -------------- |
+| LAN      |    - | `192.168.10.0/24` | `192.168.10.1` | Administrasjon |
+| SERVERS  |   10 | `192.168.20.0/24` | `192.168.20.1` | Servere        |
+| CLIENTS  |   20 | `192.168.30.0/24` | `192.168.30.1` | Klienter       |
+| DMZ      |   30 | -                 | -              | Planlagt       |
+
 
 ## Komponenter
 * VirtualBox – virtualisering og virtuelle nettverk  
