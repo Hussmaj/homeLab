@@ -51,9 +51,35 @@ Data Link-laget (lag 2) sin jobb er å levere pakker fra ett nettverkskort (NIC)
 
 ### OSI Layer 3 - Network:
 
+Nettverkslaget i OSI Modellen sitt ansvar er å levere pakker fra end to end(avsenderen helt frem til mottakeren).
+
+Dette gjøres ved hjelp av ett annet addresseringsystem som kan brukes logisk til å identifisere hver enhet som er koblet til Internett.   
+Dette adresseringssystemet kalles Internet Protocol-adressen, eller IP-adressen.  
+
+Den regnes som logisk fordi en IP-adresse ikke er en permanent identifikasjon av en datamaskin.   
+I motsetning til MAC-adressen, som regnes som en fysisk adresse, er ikke IP-adressen lagret permanent i maskinvaren av produsenten.  
+
+Rutere er nettverksenheter som oppererer på Lag 3, Nettverkslaget i OSI Modellen.   
+En routers hovedoppgave er å koble sammen ulike nettverk og sørge for kommunikasjon mellom dem.  
+
+
+### Layer 2 vs Layer 3:
+
+Selvom Lag 2 og Lag 3 virker ganske like, er det viktig og skille mellom de for å forstå hvordan data beveger seg mellom to datamaskiner.   
+**Spørsmålet er, hvorfor trenger vi forskjellige addresseringsystemer?**
+Hvis vi for eksempel allerede har et unikt adresseringssystem på lag 2 for hvert nettverkskort (NIC), som MAC-adresser, hvorfor trenger vi da enda et adresseringssystem på lag 3, som IP-adresser?
+
+Svaret er at de to adresseringssystemene har forskjellige funksjoner:
+
+* Lag 2 bruker MAC-adresser og er ansvarlig for å levere pakker fra hop til hop.  
+  Sender data fra én nettverksenhet til den neste ved hjelp av MAC-adresser. (fra én nettverksenhet til den neste)   
+* Lag 3 bruker IP-adresser og er ansvarlig for å levere pakker fra ende til ende.  
+  Sender data fra avsenderen helt frem til mottakeren ved hjelp av IP-adresser.(fra den første enheten helt frem til den siste enheten)
 
 
 ### OSI Layer 4 - Transport:
+
+
 
 ### OSI Layer 5 - Session: 
 
