@@ -4,7 +4,7 @@ Dato: 09/24/2026
 OSI-Modellen er delt i 7 deler, der hver del har spesifikk funksjon som den skal utføre. 
 Når man kombinerer alle disse 7 delene sammen, så bidrar hver funksjon til å kunne veksle data / kommunisere mellom datamaskiner.
 
-![OSI Modell](../docs/images/packtrav-osi-layers-236x300.png)  
+![OSI Modell](../../docs/images/packtrav-osi-layers-236x300.png)  
 *Figure 1: OSI Modell. Source: [Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/osi-model/)*
 
 ### OSI Layer 1 - Physical: 
@@ -130,7 +130,7 @@ Lag 1 → 1-ere og 0-ere → sendes fysisk
 ```
 
 **Illustrasjon:**    
-![Encap og decap illustrasjon](../docs/images/packtrav-encap-decap.gif)  
+![Encap og decap illustrasjon](../../docs/images/packtrav-encap-decap.gif)  
 *Figur 2: Encap og decap illustrasjon Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/osi-model/)*  
 
 
