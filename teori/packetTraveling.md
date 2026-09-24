@@ -76,10 +76,37 @@ Svaret er at de to adresseringssystemene har forskjellige funksjoner:
 * Lag 3 bruker IP-adresser og er ansvarlig for å levere pakker fra ende til ende.  
   Sender data fra avsenderen helt frem til mottakeren ved hjelp av IP-adresser.(fra den første enheten helt frem til den siste enheten)
 
+Når en datamaskin har data som skal sendes, pakker den dataene inn i en IP-header. Denne inneholder informasjon som kilde-IP-adressen og destinasjons-IP-adressen til de to «endene» av kommunikasjonen.
+
+IP-headeren og dataene blir deretter pakket inn i en MAC-header. Denne inneholder informasjon som kilde-MAC-adressen og destinasjons-MAC-adressen til det aktuelle hoppet på veien mot den endelige mottakeren.
+
 
 ### OSI Layer 4 - Transport:
 
+Denne delen av OSI Modellen har ansvar for å skille mellom forskjellige datastrømmer i ett nettverk.   
+For eksempel kan datamaskinen din samtidig:  
+* Se på YouTube  
+* Laste ned en fil  
+* Ha en nettside åpen
 
+Hver av disse applikasjonene sender og mottar data fra Internett, og alle disse dataene kommer til datamaskinens nettverkskort (NIC) i form av 1-ere og 0-er.  
+Noe må kunne skille mellom hvilke 1-ere og 0-er som tilhører Messenger, nettleseren eller musikkstrømmingen. Og det er det Transport laget sørger for slik at de kommer til riktig program.  
+
+Lag 4 oppnår dette ved å bruke et adresseringssystem som kalles portnumre(Port Numbers)
+
+Det finnes to metoder for å skille mellom ulike datastrømmer i nettverket. Disse kalles **Transmission Control Protocol (TCP)** og **User Datagram Protocol (UDP)**.
+
+Både TCP og UDP har 65 536 portnumre hver, og en unik datastrøm for en applikasjon identifiseres ved hjelp av både en kildeport og en destinasjonsport, kombinert med kilde-IP-adressen og destinasjons-IP-adressen.
+
+**IP-adressen forteller:**  
+Hvilken datamaskin skal dataene til?
+
+**Portnummeret forteller:**  
+Hvilket program på datamaskinen skal dataene til?
+
+* Lag 2: Hvilken nettverksenhet skal dataene til nå?  
+* Lag 3: Hvilken datamaskin/enhet skal dataene ende opp hos?  
+* Lag 4: Hvilken tjeneste/applikasjon på datamaskinen skal dataene til?  
 
 ### OSI Layer 5 - Session: 
 
