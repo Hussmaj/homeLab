@@ -104,9 +104,9 @@ Hvilken datamaskin skal dataene til?
 **Portnummeret forteller:**  
 Hvilket program på datamaskinen skal dataene til?
 
-* Lag 2: Hvilken nettverksenhet skal dataene til nå?  
-* Lag 3: Hvilken datamaskin/enhet skal dataene ende opp hos?  
-* Lag 4: Hvilken tjeneste/applikasjon på datamaskinen skal dataene til?  
+* **Lag 2:** Hvilken nettverksenhet skal dataene til nå?  
+* **Lag 3:** Hvilken datamaskin/enhet skal dataene ende opp hos?  
+* **Lag 4:** Hvilken tjeneste/applikasjon på datamaskinen skal dataene til?  
 
 ### OSI Layer 5 - Session: 
 
