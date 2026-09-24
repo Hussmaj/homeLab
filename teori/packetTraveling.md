@@ -4,3 +4,8 @@ Dato: 09/24/2026
 
 ### Hvordan beveger packets seg gjennom internettet. 
 
+
+
+### Kilder
+
+https://www.practicalnetworking.net/
