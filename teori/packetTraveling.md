@@ -16,6 +16,8 @@ Hvordan kommer data fra én maskin til en annen?
 OSI-Modellen er delt i 7 deler, der hver del har spesifikk funksjon som den skal utføre. 
 Når man kombinerer alle disse 7 delene sammen, så bidrar hver funksjon til å kunne veksle data / kommunisere mellom datamaskiner.
 
+![Packet traveling through a network]
+
 ### Kilder
 
 https://www.practicalnetworking.net/  
