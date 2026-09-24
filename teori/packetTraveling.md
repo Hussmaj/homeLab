@@ -9,3 +9,4 @@ Dato: 09/24/2026
 ### Kilder
 
 https://www.practicalnetworking.net/
+https://www.practicalnetworking.net/series/packet-traveling/packet-traveling/
