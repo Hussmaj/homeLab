@@ -1,6 +1,6 @@
 Dato: 09/24/2026
 
-## Packet Traveling
+# Packet Traveling
 
 Målet med dette er å forstå hvordan nettverkskommunikasjon henger sammen.   
 Det jeg ønsker og åpne med dette er å skape en modell eller ett kart over hvordan datamaskiner og nettverk kommuniserer. 
@@ -10,6 +10,11 @@ Jeg ønsker og kunne se på nettverksdiagrammer og mentalt se for meg hvordan ti
 ### Hvordan beveger packets seg gjennom internettet. 
 
 Hvordan kommer data fra én maskin til en annen?
+
+## OSI Modell: 
+
+OSI-Modellen er delt i 7 deler, der hver del har spesifikk funksjon som den skal utføre. 
+Når man kombinerer alle disse 7 delene sammen, så bidrar hver funksjon til å kunne veksle data / kommunisere mellom datamaskiner.
 
 ### Kilder
 
