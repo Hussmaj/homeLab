@@ -141,7 +141,7 @@ Lag 2 → Ethernet-header + IP-header + TCP-header + Data
 Lag 1 → 1-ere og 0-ere → sendes fysisk
 ```
 
-Illustrasjon:
+**Illustrasjon:**    
 ![Encap og decap illustrasjon](../docs/images/packtrav-encap-decap.gif)  
 *Figur 2: Encap og decap illustrasjon Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/osi-model/)*  
 
