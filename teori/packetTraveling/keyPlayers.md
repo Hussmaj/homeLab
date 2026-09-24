@@ -2,17 +2,20 @@ Dato: 09/24/2026
 
 # Key Players
 
-"Key Players" Altså viktigste aktørene på internettet og hvilken rolle hver av dem har for å muliggjøre nettverkskommunikasjon.  
+"Key Players" Altså "Viktigste Aktørene" på Internett, og hvilken rolle hver av dem har for å muliggjøre nettverkskommunikasjon.
+
 Det er mange forskjellige elementer som jobber sammen for å skape "Nettverk av Nettverk", som gjør det mulig at milliarder av forskjellige enheter kan kommunisere med hverandre. 
 
-## Host
+## Noen av de vikgitske aktørene (Ikke komplett liste)
 
-## Network
+### Host
 
-## Switch
+### Network
 
-## Router
+### Switch
 
-## Address Resolution Protocol (ARP)
+### Router
 
-## Sammendrag
+### Address Resolution Protocol (ARP)
+
+### Sammendrag
