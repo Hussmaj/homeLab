@@ -108,12 +108,38 @@ Hvilket program på datamaskinen skal dataene til?
 * **Lag 3:** Hvilken datamaskin/enhet skal dataene ende opp hos?  
 * **Lag 4:** Hvilken tjeneste/applikasjon på datamaskinen skal dataene til?  
 
-### OSI Layer 5 - Session: 
+### OSI Layer 5 - Session, OSI Layer 6 - Presentation, OSI Layer 7 - Application: 
 
-### OSI Layer 6 - Presentation:
+Sesjonslaget, presentasjonslaget og applikasjonslaget i OSI-modellen håndterer de siste stegene før dataene som er overført gjennom nettverket (ved hjelp av lag 1–4) blir vist til sluttbrukeren.
 
-### OSI Layer 7 - Application:
+Fra et rent nettverksteknisk perspektiv er forskjellen mellom lag 5, 6 og 7 ikke spesielt viktig.  
+En annen populær modell for Internett-kommunikasjon, kalt TCP/IP-modellen, som samler disse tre lagene i ett enkelt lag.
 
+Forskjellen mellom disse lagene blir mer betydningsfull dersom du jobber med programvareutvikling.
+
+### Encapsulation and Decapsulation:
+
+Encapsulation og Decapsulation er begreper som brukes for å forklare hvordan data beveger seg gjennom lagene i OSI modellen.   
+**Fra Topp til Bunn:** Når man sender noe.
+**Fra Bunn til Topp:** Når man mottar noe.
+
+Når dataene sendes fra lag til lag, legger hvert lag til informasjonen det trenger for å utføre sin oppgave, før hele datagrammet blir gjort om til 1-ere og 0-ere og sendt gjennom kabelen.
+
+**For eksempel:**
+
+* Lag 4 legger til en TCP-header, som inneholder blant annet kildeport og destinasjonsport.  
+* Lag 3 legger til en IP-header, som inneholder blant annet kilde-IP-adresse og destinasjons-IP-adresse.  
+* Lag 2 legger til en Ethernet-header, som inneholder blant annet kilde-MAC-adresse og destinasjons-MAC-adresse.  
+
+```text
+Lag 4 → TCP-header + Data
+          ↓
+Lag 3 → IP-header + TCP-header + Data
+          ↓
+Lag 2 → Ethernet-header + IP-header + TCP-header + Data
+          ↓
+Lag 1 → 1-ere og 0-ere → sendes fysisk
+```
 
 
 ### Kilder
