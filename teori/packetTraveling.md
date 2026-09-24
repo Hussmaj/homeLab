@@ -13,5 +13,5 @@ Hvordan kommer data fra én maskin til en annen?
 
 ### Kilder
 
-https://www.practicalnetworking.net/
+https://www.practicalnetworking.net/  
 https://www.practicalnetworking.net/series/packet-traveling/packet-traveling/
