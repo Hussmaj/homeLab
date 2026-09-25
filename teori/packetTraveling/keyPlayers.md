@@ -71,6 +71,12 @@ Disse veiene kalles noen ganger routes, og hver oppføring inneholder et IP-nett
 
 ### Address Resolution Protocol (ARP)
 
+Når en klient prøver å kommunisere med en vert på det samme nettverket, vil klienten sende en ARP-forespørsel for å finne MAC-adressen til verten.
+*Figur 1:*
+
+Når en klient prøver å kommunisere med en vert på et annet nettverk, vil klienten sende en ARP-forespørsel for å finne MAC-adressen til standard-gatewayen.
+
+
 Fortsette her imrg:
 
 https://www.practicalnetworking.net/series/packet-traveling/key-players/
