@@ -72,6 +72,7 @@ Disse veiene kalles noen ganger routes, og hver oppføring inneholder et IP-nett
 ### Address Resolution Protocol (ARP)
 
 Når to enheter skal kommunisere, kjenner de vanligvis allerede IP-adressen til hverandre.  IP-adressen kan for eksempel være satt manuelt eller funnet gjennom DNS.   Hvordan de fikk IP-adressen er ikke viktig her.  
+
 ARP (Address Resolution Protocol) brukes til å finne MAC-adressen som tilhører en kjent IP-adresse, slik at data kan sendes over det lokale nettverket.
 
 **I illustrasjonen nedenfor er det tre nettverk:** 
@@ -97,9 +98,21 @@ For det andre når en vert kommuniserer med en annen vert på et annet nettverk 
 ![Client to host on same network](../../docs/images/client-to-foreign-host.png)
 *Figur 3:Client to host on same network. Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/key-players/)*
 
+**Sammendrag: Hvordan ARP fungerer:**
+* Når en klient kommuniserer med en vert på samme nettverk, bruker den ARP for å finne vertens MAC-adresse.  
+* Når en klient kommuniserer med en vert på et annet nettverk, bruker den ARP for å finne default gatewayens MAC-adresse.
 
-Fortsette her imrg:
+Husk at Layer 2 har ansvar for å levere data fra hop til hop, mens Layer 3 har ansvar for levering fra kilde til destinasjon (end-to-end).
+ARP kobler disse to lagene sammen. ARP hjelper enheten med å finne riktig MAC-adresse (Layer 2) basert på en kjent IP-adresse (Layer 3), slik at pakken kan sendes til neste hop.
 
-https://www.practicalnetworking.net/series/packet-traveling/key-players/
+**Enkelt sagt:**
 
+* Layer 3: Hvor skal pakken? → IP-adresse  
+* Layer 2: Hvem skal jeg sende den til nå? → MAC-adresse  
+* ARP: Hvilken MAC-adresse hører til denne IP-adressen?  
+
+Derfor må enheter som router IP-pakker også kunne bruke MAC-adresser for å sende pakken til neste hop, og de må derfor ha en ARP-tabell.
 ### Sammendrag
+
+
+
