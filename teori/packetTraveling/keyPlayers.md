@@ -114,5 +114,26 @@ ARP kobler disse to lagene sammen. ARP hjelper enheten med å finne riktig MAC-a
 Derfor må enheter som router IP-pakker også kunne bruke MAC-adresser for å sende pakken til neste hop, og de må derfor ha en ARP-tabell.
 ### Sammendrag
 
-
-
+**OSI-lagene:**
+* Layer 1 – Physical: Sender bits (1 og 0) gjennom kabel eller trådløst medium.  
+* Layer 2 – Data Link: Ansvarlig for hop-to-hop levering og bruker MAC-adresser.  
+* Layer 3 – Network: Ansvarlig for end-to-end levering og bruker IP-adresser.  
+* Layer 4 – Transport: Ansvarlig for service-to-service levering og bruker portnumre.
+  
+**Viktige enheter/protokoller:**
+* Switch: Kobler sammen enheter innenfor samme nettverk. Opererer hovedsakelig på Layer 2 og bruker MAC-adresser.
+* Router: Kobler sammen ulike nettverk. Opererer på Layer 3 og bruker IP-adresser.
+* ARP: Bruker en kjent IP-adresse for å finne en ukjent MAC-adresse.
+  
+```text
+| Enhet        | Tabell            | Inneholder                      |
+| ------------ | ----------------- | ------------------------------- |
+| **Switch**   | MAC Address Table | MAC-adresse → switchport        |
+| **Router**   | Routing Table     | Nettverk → interface / next hop |
+| **L3-enhet** | ARP Table         | IP-adresse → MAC-adresse        |  
+```
+### Huske regel: 
+* Layer 2 = hvem skal jeg sende til på neste hop? → MAC  
+* Layer 3 = hvilket nettverk/destinasjon skal pakken til? → IP  
+* Layer 4 = hvilken tjeneste på enheten skal ha dataene? → Port  
+* ARP = kobler IP sammen med MAC.  
