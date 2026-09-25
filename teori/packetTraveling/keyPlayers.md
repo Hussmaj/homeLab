@@ -71,15 +71,25 @@ Disse veiene kalles noen ganger routes, og hver oppføring inneholder et IP-nett
 
 ### Address Resolution Protocol (ARP)
 
+**I illustrasjonen nedenfor er det tre nettverk:** 
+* Det lilla nettverket  
+* Det grå nettverket   
+* Det røde nettverket.
+
+**Diagrammet illustrerer to tilfeller av ARP:**
+
+For det første når en vert kommuniserer med en annen vert på det samme nettverket (klient til lilla server).  
+For det andre når en vert kommuniserer med en annen vert på et annet nettverk (klient til rød server).  
+
 ![ARP-Instances](../../docs/images/packtrav-arp-instances.png)
 *Figure 1: OSI Modell. Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/key-players/)*
 
-Når en klient prøver å kommunisere med en vert på det samme nettverket, vil klienten sende en ARP-forespørsel for å finne MAC-adressen til verten.
+**Når en klient prøver å kommunisere med en vert på det samme nettverket, vil klienten sende en ARP-forespørsel for å finne MAC-adressen til verten.**
 
 ![Client to host on same network](../../docs/images/client-to-internal-host.png)
 *Figur 2:Client to host on same network. Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/key-players/)*
 
-Når en klient prøver å kommunisere med en vert på et annet nettverk, vil klienten sende en ARP-forespørsel for å finne MAC-adressen til standard-gatewayen.
+**Når en klient prøver å kommunisere med en vert på et annet nettverk, vil klienten sende en ARP-forespørsel for å finne MAC-adressen til standard-gatewayen.**
 
 ![Client to host on same network](../../docs/images/client-to-foreign-host.png)
 *Figur 3:Client to host on same network. Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/key-players/)*
