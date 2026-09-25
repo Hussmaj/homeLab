@@ -71,6 +71,9 @@ Disse veiene kalles noen ganger routes, og hver oppføring inneholder et IP-nett
 
 ### Address Resolution Protocol (ARP)
 
+Når to enheter skal kommunisere, kjenner de vanligvis allerede IP-adressen til hverandre.  IP-adressen kan for eksempel være satt manuelt eller funnet gjennom DNS.   Hvordan de fikk IP-adressen er ikke viktig her.  
+ARP (Address Resolution Protocol) brukes til å finne MAC-adressen som tilhører en kjent IP-adresse, slik at data kan sendes over det lokale nettverket.
+
 **I illustrasjonen nedenfor er det tre nettverk:** 
 * Det lilla nettverket  
 * Det grå nettverket   
