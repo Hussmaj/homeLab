@@ -78,6 +78,12 @@ I sjeldne tilfeller kan en Host sende en Frame med sin egen MAC-adresse som dest
 
 Hvordan funker en switch i praksis? 
 
+**Illustrasjon:**
+
+![Host-to-host-switch](../../docs/images/packtrav-host-switch-host.gif)  
+*Figur 1: Host to Host communcation through a Switch Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/host-to-host-through-a-switch/)*
+
+
 
 
 https://www.practicalnetworking.net/series/packet-traveling/host-to-host-through-a-switch/
