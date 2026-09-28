@@ -83,7 +83,7 @@ Hvordan funker en switch i praksis?
 ![Host-to-host-switch](../../docs/images/packtrav-host-switch-host.gif)  
 *Figur 1: Host to Host communcation through a Switch Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/host-to-host-through-a-switch/)*
 
-I figuren ovenfor så antar vi at Hostene kjenner til hveranders IP og MAC-Addresser. V
+I figuren ovenfor så antar vi at Hostene kjenner til hveranders IP og MAC-Addresser.  
 Vanligvis så ville klient hosten ha sendt ut ett ARP Resolution, men vi antar dette har har allerede skjedd og vi vet nå IP og MAC-Addresser. 
 
 - Host A har «noe» den skal sende til Host B. (Innholdet/Data'en er ikke viktig)
