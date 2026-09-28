@@ -96,5 +96,17 @@ Vanligvis så ville klient hosten ha sendt ut ett ARP Resolution, men vi antar d
 - Når svaret kommer tilbake, lærer switchen at bbbb.bbbb.bbbb finnes på port 2.
 - Neste gang Host A sender til Host B, kjenner switchen destinasjonen og kan videresende rammen direkte til port 2.
 
+## Forskjell på Broadcast og Flooding
+
+En host/enhet kan lage en broadcast-ramme ved å sende til MAC-adressen: **FF:FF:FF:FF:FF:FF**  
+Switchen utfører ikke broadcast selv, men når den mottar en slik broadcast-ramme, vil den floode rammen ut til alle relevante porter.
+
+**Eksempel:**  
+* PC A → Switch → PC B, PC C, PC D  
+* PC A lager en broadcast: Destination MAC = FF:FF:FF:FF:FF:FF  
+* Switchen mottar den og sender den videre til PC B, C og D.
+
+Host lager broadcast → Switch flooder broadcasten og alle enheter i samme broadcast-domene mottar den.
+
 ### Kilder: 
 https://www.practicalnetworking.net/series/packet-traveling/host-to-host-through-a-switch/
