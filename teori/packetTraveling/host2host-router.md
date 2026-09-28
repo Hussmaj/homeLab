@@ -105,7 +105,7 @@ ARP Table: Hvilken MAC-adresse skal jeg sende pakken til?
 
 ARP Table fylles etter behov og trenger ikke å være fylt påforhånd. 
 
-Eksempen: 
+#### Eksempel:
 
 R1 skal sende en pakke til: Host B IP: 22.22.22.88
 
@@ -113,7 +113,7 @@ R1 vet fra Routing Table at Host B befinner seg på et nettverk som er direkte k
 
 Men R1 trenger MAC-adressen til Host B.
 
-R1 sjekker ARP-tabellen:  
+**R1 sjekker ARP-tabellen:**  
 22.22.22.88 → ?
 
 Hvis MAC-adressen ikke finnes, sender R1 en ARP Request.
