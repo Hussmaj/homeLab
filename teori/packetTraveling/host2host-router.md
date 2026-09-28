@@ -124,7 +124,7 @@ Host B svarer med sin MAC-adresse:
 R1 kan da lagre dette:
 
 ```text
-**ARP Table**
+ARP Table
 
 IP-adresse       MAC-adresse  
 22.22.22.88      bbbb.bbbb.bbbb
