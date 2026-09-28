@@ -83,7 +83,18 @@ Hvordan funker en switch i praksis?
 ![Host-to-host-switch](../../docs/images/packtrav-host-switch-host.gif)  
 *Figur 1: Host to Host communcation through a Switch Source:[Practicalnetworking](https://www.practicalnetworking.net/series/packet-traveling/host-to-host-through-a-switch/)*
 
+I figuren ovenfor så antar vi at Hostene kjenner til hveranders IP og MAC-Addresser. V
+Vanligvis så ville klient hosten ha sendt ut ett ARP Resolution, men vi antar dette har har allerede skjedd og vi vet nå IP og MAC-Addresser. 
 
+- Host A har «noe» den skal sende til Host B. (Innholdet/Data'en er ikke viktig)
+- Framen inneholder en kilde-MAC-adresse og en destinasjons-MAC-adresse.
+- Til å begynne med er switchens MAC-adressetabell tom.
 
+- Når Host A sender en Framen til Host B, lærer(**Learning**) switchen kilde-MAC-adressen aaaa.aaaa.aaaa og kobler den til port 1.
+- Siden switchen ikke kjenner MAC-adressen bbbb.bbbb.bbbb, Floodes(**Flooding**) Framen ut på alle porter unntatt port 1. Dette er også **Filtering**.
+- Host C forkaster Framen fordi den ikke er mottakeren, mens Host B mottar den og sender et svar.
+- Når svaret kommer tilbake, lærer switchen at bbbb.bbbb.bbbb finnes på port 2.
+- Neste gang Host A sender til Host B, kjenner switchen destinasjonen og kan videresende rammen direkte til port 2.
 
+### Kilder: 
 https://www.practicalnetworking.net/series/packet-traveling/host-to-host-through-a-switch/
