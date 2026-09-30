@@ -1,4 +1,4 @@
-### Dagens dato: 
+Dato: 
 
 ## Dagens mål: 
 
