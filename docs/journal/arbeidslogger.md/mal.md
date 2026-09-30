@@ -1,9 +1,5 @@
 ### Dagens dato: 
 
-## Gårsdagens arbeid:
-
-### Konfigurasjoner:
-
 ## Dagens mål: 
 
 ### Forventet resultat
