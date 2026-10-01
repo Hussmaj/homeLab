@@ -14,25 +14,30 @@ Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som g
 | LAN | - | `192.168.10.0/24` | `192.168.10.1` | Administrasjon |
 | SERVERS | 10 | `192.168.20.0/24` | `192.168.20.1` | Servere |
 | CLIENTS | 20 | `192.168.30.0/24` | `192.168.30.1` | Klienter |
-| DMZ | 30 | `192.168.40.0/24` | `192.168.40.1` | - |
+| DMZ | 30 | `192.168.40.0/24` | `192.168.40.1` | DMZ |
 
 ## Komponenter
 * VirtualBox – virtualisering og virtuelle nettverk  
 * pfSense – gateway, DHCP, DNS, routing og brannmur  
 * Open vSwitch – virtuell VLAN-switch  
 * Ubuntu Server – servermiljø og Apache  
-* Windows – klient og testing  
-* VLAN   
+* Windows – klient og testing
+* VLAN / 802.1Q
+
 
 VLAN brukes for å segmentere nettverket mellom servere og klienter.
 
 * VLAN 10 – SERVERS  
 * VLAN 20 – CLIENTS  
-* VLAN 30 – DMZ (planlagt)  
+* VLAN 30 – DMZ 
 
 Open vSwitch bruker en trunk mot pfSense og en access-port for klientnettverket.
+Open vSwitch bruker en trunkforbindelse mot pfSense for VLAN 10, 20 og 30.
 
-Ubuntu Server bruker et VLAN-interface konfigurert med Netplan.
+VLAN 20 og VLAN 30 er konfigurert med egne access-porter på Open vSwitch.
+
+Ubuntu Server på VLAN 10 bruker foreløpig et VLAN-interface konfigurert med Netplan. Dette skyldes begrensningen på fire virtuelle nettverkskort i VirtualBox, hvor alle nettverkskortene på OVS-VM-en allerede er i bruk.
+
 
 ## Tjenester
 * DHCP
@@ -54,31 +59,41 @@ Eksempler fra prosjektet:
 * Virtuelle nettverkskort  
 * Routing  
 * Brannmurregler  
-* Nettverksinterface som ikke var aktive  
+* Nettverksinterface som ikke var aktive
+* VirtualBox nettverksinnstillinger
+* Promiscuous Mode
 
-Feilsøkingen dokumenteres underveis sammen med relevante kommandoer og resultater.
+
+Feilsøkingen dokumenteres underveis i /docs/journal/arbeidslogger, sammen med relevante kommandoer og resultater.
 
 ## Status
 
-Labben er under utvikling.
+Labben fungerer og under videre utvikling.
 
 ## Ferdig
-* VirtualBox-nettverk  
-* pfSense gateway og brannmur  
-* LAN  
-* VLAN 10 / SERVERS  
-* VLAN 20 / CLIENTS  
-* Open vSwitch  
-* VLAN trunk  
-* Access-port for klienter  
-* DHCP  
-* Ubuntu Server med Netplan  
-* Apache Web Server  
-* Nettverkstesting og feilsøking  
+* VirtualBox-nettverk
+* pfSense gateway og brannmur
+* LAN
+* VLAN 10 / SERVERS
+* VLAN 20 / CLIENTS
+* VLAN 30 / DMZ
+* Open vSwitch
+* VLAN trunk
+* Access-port for klienter
+* Access-port for DMZ
+* DHCP
+* Ubuntu Server med Netplan
+* Ubuntu DMZ
+* Apache Web Server
+* Nettverkstesting og feilsøking
 
 ## Planlagt
-* VLAN 30 / DMZ  
-* Videre brannmur- og tilgangskontroll  
+
+* Sette opp en ny versjon av labben i VMware Workstation Pro
+* Bruke flere virtuelle nettverkskort for OVS
+* Sette opp en egen access-port for VLAN 10
+* Flytte Ubuntu Server fra manuell VLAN-tagging til en vanlig access-port
+* Videre brannmur- og tilgangskontroll
 * Flere tjenester og servere
 
 ## Teknologier
@@ -86,7 +101,8 @@ Labben er under utvikling.
 * VirtualBox  
 * pfSense  
 * Open vSwitch  
-* Ubuntu Server  
+* Ubuntu Server
+* Ubuntu DMZ  
 * Windows   
 * VLAN/802.1Q  
 * IPv4  
