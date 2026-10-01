@@ -6,43 +6,8 @@ Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som g
 
 ## Arkitektur
 
-```text
-                         INTERNET
-                            │
-                     VirtualBox NAT
-                            │
-                       pfSense WAN
-                            │
-                    ┌───────┴────────┐
-                    │    pfSense     │
-                    │                │
-                    │ LAN            │
-                    │ 192.168.10.1   │
-                    │                │
-                    │ VLAN 10        │
-                    │ 192.168.20.1   │
-                    │ SERVERS        │
-                    │                │
-                    │ VLAN 20        │
-                    │ 192.168.30.1   │
-                    │ CLIENTS        │
-                    └───────┬────────┘
-                            │
-                       VLAN-LAB
-                            │
-                       SWITCH-OVS
-                       Open vSwitch
-                            │
-                 ┌──────────┴──────────┐
-                 │                     │
-            VLAN trunk             Access VLAN 20
-            VLAN 10/20/30               │
-                 │                 CLIENTS-ACCESS
-                 │                     │
-          Ubuntu Server            Windows
-          VLAN 10                  VLAN 20
-          192.168.20.100           192.168.30.100
-```
+![Arkitektur](/docs/images/finalArchitecture.drawio.png)  
+*Figur 1: Arkitektur av Prosjektet.*
 
 | Nettverk | VLAN | Subnett | Gateway | Bruk |
 |---|---:|---|---|---|
