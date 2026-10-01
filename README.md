@@ -17,7 +17,7 @@ Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur
 | pfSense | `192.168.10.1` | LAN | Gateway |
 | OVS | `192.168.10.102` | LAN | Administrasjon |
 | pfSense | `192.168.20.1` | SERVERS | Gateway |
-| Ubuntu Server | `192.168.20.x` | SERVERS | Server |
+| Ubuntu Server | `192.168.20.100` | SERVERS | Server |
 | pfSense | `192.168.30.1` | CLIENTS | Gateway |
 | Windows Client | `192.168.30.100` | CLIENTS | Klient |
 | pfSense | `192.168.40.1` | DMZ | Gateway |
