@@ -10,12 +10,16 @@ Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur
 ![Arkitektur](/docs/images/finalArchitecture.drawio.png)  
 *Figur 1: Arkitektur av Prosjektet.*
 
-| Nettverk | VLAN | Subnett | Gateway | Bruk |
-|---|---:|---|---|---|
-| LAN | - | `192.168.10.0/24` | `192.168.10.1` | Administrasjon |
-| SERVERS | 10 | `192.168.20.0/24` | `192.168.20.1` | Servere |
-| CLIENTS | 20 | `192.168.30.0/24` | `192.168.30.1` | Klienter |
-| DMZ | 30 | `192.168.40.0/24` | `192.168.40.1` | DMZ |
+
+| Enhet | IP-adresse | Nettverk | Rolle |
+|---|---|---|---|
+| pfSense | `192.168.10.1` | LAN | Gateway |
+| OVS | `192.168.10.102` | LAN | Administrasjon |
+| pfSense | `192.168.20.1` | SERVERS | Gateway |
+| pfSense | `192.168.30.1` | CLIENTS | Gateway |
+| Windows | `192.168.30.100` | CLIENTS | Klient |
+| pfSense | `192.168.40.1` | DMZ | Gateway |
+| Ubuntu DMZ | `192.168.40.101` | DMZ | Server |
 
 ## Komponenter
 * VirtualBox – virtualisering og virtuelle nettverk  
