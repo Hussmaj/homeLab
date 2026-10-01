@@ -17,10 +17,11 @@ Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur
 | pfSense | `192.168.10.1` | LAN | Gateway |
 | OVS | `192.168.10.102` | LAN | Administrasjon |
 | pfSense | `192.168.20.1` | SERVERS | Gateway |
+| Ubuntu Server | `192.168.20.x` | SERVERS | Server |
 | pfSense | `192.168.30.1` | CLIENTS | Gateway |
-| Windows | `192.168.30.100` | CLIENTS | Klient |
+| Windows Client | `192.168.30.100` | CLIENTS | Klient |
 | pfSense | `192.168.40.1` | DMZ | Gateway |
-| Ubuntu DMZ | `192.168.40.101` | DMZ | Server |
+| Ubuntu DMZ | `192.168.40.101` | DMZ | DMZ-server |
 
 ## Komponenter
 * VirtualBox – virtualisering og virtuelle nettverk  
