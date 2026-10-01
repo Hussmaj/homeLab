@@ -23,6 +23,20 @@ Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur
 | pfSense | `192.168.40.1` | DMZ | Gateway |
 | Ubuntu DMZ | `192.168.40.101` | DMZ | DMZ-server |
 
+## OVS-oppsett
+
+Open vSwitch brukes som den virtuelle VLAN-switchen i labben. OVS kobler pfSense sammen med server-, klient- og DMZ-nettverkene.
+
+| Interface | Nettverk | Type | VLAN |
+|---|---|---|---:|
+| `enp0s8` | VLAN-LAB | Trunk | 10, 20, 30 |
+| `enp0s9` | CLIENTS-ACCESS | Access | 20 |
+| `enp0s10` | DMZ-ACCESS | Access | 30 |
+
+VLAN 10 har ikke en egen access-port i den nåværende VirtualBox-labben. Ubuntu Server bruker derfor VLAN-tagging over trunkforbindelsen.
+
+
+
 ## Komponenter
 * VirtualBox – virtualisering og virtuelle nettverk  
 * pfSense – gateway, DHCP, DNS, routing og brannmur  
