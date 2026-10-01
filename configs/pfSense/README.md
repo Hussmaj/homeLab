@@ -1,8 +1,8 @@
-## pfSense konfigurasjoner
+# pfSense
 
 pfSense fungerer som gateway, DHCP-server, DNS, router og brannmur i labben.
 
-### Nettverksgrensesnitt
+## Nettverksgrensesnitt
 
 | Interface | Nettverk | IP-adresse | Funksjon |
 |---|---|---|---|
@@ -14,13 +14,13 @@ pfSense fungerer som gateway, DHCP-server, DNS, router og brannmur i labben.
 
 VLAN 10, 20 og 30 er opprettet på `em0`. `em0` er nettverkskortet som brukes som parent for VLAN 10, 20 og 30.
 
-### DHCP
+## DHCP
 
 DHCP brukes for automatisk tildeling av IP-adresser til klienter og DMZ.
 
 - CLIENTS: `192.168.30.100–200`
 - DMZ: `192.168.40.100–200`
 
-### Brannmur
+## Brannmur
 
 pfSense brukes til å kontrollere trafikken mellom de ulike nettverkene og mellom labben og Internett.
