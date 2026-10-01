@@ -1,8 +1,8 @@
 # Nettverk Hjemmelab
 
-Virtuell hjemmelab for praktisk læring innen nettverk, serverdrift og grunnleggende nettverkssikkerhet.
-
-Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som gateway og brannmur, mens Ubuntu Server og Windows brukes som server- og klientmiljø.
+Virtuell hjemmelab for praktisk læring innen nettverk, serverdrift og grunnleggende nettverkssikkerhet.  
+Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som gateway og brannmur, mens Ubuntu Server og Windows brukes som server- og klientmiljø.   
+Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur og virtuelle nettverk.  
 
 ## Arkitektur
 
