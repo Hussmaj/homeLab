@@ -1,4 +1,4 @@
-## OVS-oppsett
+## OVS konfigurasjoner
 
 Open vSwitch brukes som den virtuelle VLAN-switchen i labben. OVS kobler pfSense sammen med server-, klient- og DMZ-nettverkene.
 
