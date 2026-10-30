@@ -40,8 +40,8 @@ Open vSwitch brukes som den virtuelle VLAN-switchen i labben. OVS kobler pfSense
 | `enp0s8` | VLAN-LAB | Trunk | 10, 20, 30 |
 | `enp0s9` | CLIENTS-ACCESS | Access | 20 |
 | `enp0s10` | DMZ-ACCESS | Access | 30 |
+| `enp0s16` | SERVER-ACCESS | Access | 10 |
 
-VLAN 10 har ikke en egen access-port i den nåværende VirtualBox-labben. Ubuntu Server bruker derfor VLAN-tagging over trunkforbindelsen.
 
 ## pfSense-oppsett
 
@@ -71,10 +71,19 @@ VLAN brukes for å dele nettverket opp mellom servere, klienter og DMZ.
 - VLAN 20 – CLIENTS  
 - VLAN 30 – DMZ  
 
+**Gamelt status**  
 Open vSwitch bruker en trunkforbindelse mot pfSense som transporterer VLAN 10, 20 og 30.  
 VLAN 20 og VLAN 30 har egne access-porter på Open vSwitch.  
 Ubuntu Server på VLAN 10 bruker foreløpig et eget VLAN-interface konfigurert med Netplan.   
+
 Dette skyldes at OVS-VM-en i dette oppsettet har fire virtuelle nettverkskort, og alle er allerede i bruk. Derfor har VLAN 10 ikke en egen access-port på OVS.  
+
+**Oppdatert status 10/30/2026 kl 19:27**  
+Open vSwitch bruker en trunkforbindelse mot pfSense som transporterer VLAN 10, 20 og 30.
+
+VLAN 20 og VLAN 30 har egne access-porter på Open vSwitch. Opprinnelig manglet VLAN 10 en egen access-port fordi alle fire virtuelle nettverkskortene på OVS-VM-en allerede var i bruk. Ubuntu Server brukte derfor et eget VLAN-interface konfigurert med Netplan for å håndtere VLAN 10.
+
+For å løse dette opprettet jeg et ekstra virtuelt nettverkskort på OVS-VM-en ved hjelp av VBoxManage via CLI. Det nye grensesnittet, enp0s16, ble lagt til som en access-port på VLAN 10. Deretter endret jeg nettverkskonfigurasjonen på Ubuntu Server til å bruke DHCP uten manuell VLAN-tagging i Netplan, og fjernet det gamle VLAN 10-grensesnittet.
 
 ## Tjenester
 * DHCP
