@@ -7,7 +7,7 @@ Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur
 
 ## Arkitektur
 
-![Arkitektur](/docs/images/finalArchitecture.drawio.png)  
+![Arkitektur](/docs/images/finalArchitecture2.drawio.png)  
 *Figur 1: Arkitektur av Prosjektet.*
 
 ## Komponenter
