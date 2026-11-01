@@ -37,13 +37,12 @@ Trafikken fra Windows Client kommer inn på OVS som vanlig, umerket Ethernet-tra
 
 OVS kobler trafikken fra denne porten til VLAN 30 før den sendes videre over trunkforbindelsen.
 
-### VLAN 10
+### Access-port VLAN 10
 
-VLAN 10 har ikke en egen access-port i denne versjonen av labben.
+`enp0s16` er konfigurert som access-port for VLAN 10. Ubuntu Server er koblet til VirtualBox-nettverket `SERVER-ACCESS`.
 
-VirtualBox-VM-en som kjører OVS har fire tilgjengelige nettverkskort, og alle er allerede i bruk. Ubuntu Server håndterer derfor VLAN-taggingen selv gjennom et VLAN-interface og sender trafikken tagget over `VLAN-LAB`.
+OVS kobler trafikken fra denne porten til VLAN 10 før den sendes videre over trunkforbindelsen.
 
-Dette er en begrensning i den nåværende VirtualBox-løsningen, og ikke en del av den planlagte løsningen for en eventuell ny VMware-versjon.
 
 ## Administrasjon
 
