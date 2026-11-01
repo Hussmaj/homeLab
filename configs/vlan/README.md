@@ -10,14 +10,14 @@ VLAN brukes i labben for å dele nettverket opp i separate logiske nettverk. Det
 - Bruk: Servere
 - Ubuntu Server: `192.168.20.100`
 
-**Gammelt oppsett:** 
+**Gammelt oppsett:**   
 VLAN 10 brukes som servernettverk. Ubuntu Server er plassert i dette nettverket og brukes blant annet til Apache Web Server.
 
 I den nåværende VirtualBox-labben har VLAN 10 ikke en egen access-port på Open vSwitch. Dette skyldes at OVS-VM-en har fire virtuelle nettverkskort, og disse er allerede benyttet av LAN, trunkforbindelsen, CLIENTS og DMZ.
 
 Ubuntu Server håndterer derfor VLAN-taggingen selv gjennom et VLAN-interface. Trafikken sendes tagget over trunkforbindelsen mellom Open vSwitch og pfSense.
 
-**Nytt oppsett**
+**Nytt oppsett**  
 I den nye satt opp labben har VLAN 1o en egen access-port på den Virtuelle switchen. Problemet før skyldtes av at man kunne kun opprette 4 NIC i brukergrensesnittet til VirtualBox. 
 Problemet er nå løst, det er mulig og ha opp til 8 NIC i VirtualBox men NIC 5 til 8 må konfigureres gjennom VirutualBox sin CLI. 
 
