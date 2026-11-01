@@ -18,7 +18,7 @@ I den nåværende VirtualBox-labben har VLAN 10 ikke en egen access-port på Ope
 Ubuntu Server håndterer derfor VLAN-taggingen selv gjennom et VLAN-interface. Trafikken sendes tagget over trunkforbindelsen mellom Open vSwitch og pfSense.
 
 **Nytt oppsett**  
-I den nye satt opp labben har VLAN 1o en egen access-port på den Virtuelle switchen. Problemet før skyldtes av at man kunne kun opprette 4 NIC i brukergrensesnittet til VirtualBox. 
+I den nye satt opp labben har VLAN 10 en egen access-port på den Virtuelle switchen. Problemet før skyldtes av at man kunne kun opprette 4 NIC i brukergrensesnittet til VirtualBox. 
 Problemet er nå løst, det er mulig og ha opp til 8 NIC i VirtualBox men NIC 5 til 8 må konfigureres gjennom VirutualBox sin CLI. 
 
 ## VLAN 20 – CLIENTS
