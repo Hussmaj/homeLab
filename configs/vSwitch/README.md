@@ -17,6 +17,9 @@ Open vSwitch bruker bridgen `br0`.
 | `enp0s8` | `VLAN-LAB` | Trunk | 10, 20, 30 | Forbindelse til pfSense |
 | `enp0s9` | `CLIENTS-ACCESS` | Access | 20 | Windows Client |
 | `enp0s10` | `DMZ-ACCESS` | Access | 30 | Ubuntu DMZ |
+| `enp0s16` | `Server-ACCESS` | Access | 10 | Ubuntu Server |
+
+
 
 ### Trunk
 
