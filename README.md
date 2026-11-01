@@ -93,6 +93,16 @@ For å løse dette opprettet jeg et ekstra virtuelt nettverkskort på OVS-VM-en 
 * Firewall
 * Apache Web Server
 
+## Brannmur regler
+
+### Begrensning av tilgang til pfSense sitt webgrensesnitt
+
+* Tilgangen til pfSense sitt webgrensesnitt er konfigurert slik at administrasjon skjer via LAN-adressen 192.168.10.1/24. LAN fungerer som administrasjonsnett, der pfSense har IP-adressen 192.168.10.1 og OVS har IP-adressen 192.168.10.102.
+
+* Administrasjonen utføres fra Windows-klienten på CLIENTS-nettverket (192.168.30.0/24), med IP-adressen 192.168.30.100. Klienten når pfSense sitt webgrensesnitt via 192.168.10.1
+
+* Tilgangen via gateway-adressene til SERVERS (192.168.20.1), CLIENTS (192.168.30.1) og DMZ (192.168.40.1) er ikke tilgjengelig. Dette bidrar til å skille administrasjon av brannmuren fra de øvrige grensesnittene.
+
 ## Feilsøking
 
 Labben brukes også til praktisk feilsøking av nettverksproblemer.
