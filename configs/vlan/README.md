@@ -68,14 +68,12 @@ På pfSense er VLAN 10, 20 og 30 opprettet på `em0`.
 ```text
                     pfSense
                        │
-                      em0
                        │
-              VLAN-LAB / Trunk
-              VLAN 10, 20, 30
+                     Trunk-port
                        │
-                       ▼
                   Open vSwitch
                        │
+    Access-port  Access-port   Access-port
           ┌────────────┼────────────┐
           │            │            │
        VLAN 10       VLAN 20      VLAN 30
