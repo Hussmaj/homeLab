@@ -112,9 +112,7 @@ For å løse dette opprettet jeg et ekstra virtuelt nettverkskort på OVS-VM-en 
 
 ## Feilsøking
 
-Labben brukes også til praktisk feilsøking av nettverksproblemer.
-
-Eksempler fra prosjektet:
+**Eksempler fra prosjektet:**
 
 * DHCP-problemer  
 * VLAN-tagging  
@@ -126,11 +124,11 @@ Eksempler fra prosjektet:
 * VirtualBox nettverksinnstillinger
 * Promiscuous Mode
 
-Detaljert feilsøking og løsninger dokumenteres i `docs/journal/feilsoking/` sammen med relevante kommandoer og resultater.
+Detaljert feilsøking og løsninger dokumenteres i `docs/journal/feilsøking/` sammen med relevante kommandoer og resultater.
 
 ## Status
 
-Labben fungerer og satt opp slik illustrasjonen viser og er klar til videre utvikling.
+Labben fungerer og satt opp slik den er vist i Nettverksarkitekturen. 
 
 ## Ferdig
 * VirtualBox-nettverk
@@ -148,11 +146,6 @@ Labben fungerer og satt opp slik illustrasjonen viser og er klar til videre utvi
 * Ubuntu DMZ
 * Apache Web Server
 * Nettverkstesting og feilsøking
-
-## Planlagt
-
-* Videre brannmur- og tilgangskontroll
-* Flere tjenester og servere
 
 ## Teknologier
 
