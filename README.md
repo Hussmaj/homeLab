@@ -84,14 +84,14 @@ VLAN brukes for å dele nettverket opp mellom servere, klienter og DMZ.
 - VLAN 20 – CLIENTS  
 - VLAN 30 – DMZ  
 
-**Gammelt Vlan resultat**  
+**Gammelt VLAN Konfigurasjon**    
 Open vSwitch bruker en trunkforbindelse mot pfSense som transporterer VLAN 10, 20 og 30.  
 VLAN 20 og VLAN 30 har egne access-porter på Open vSwitch.  
 Ubuntu Server på VLAN 10 bruker foreløpig et eget VLAN-interface konfigurert med Netplan.   
 
 Dette skyldes at OVS-VM-en i dette oppsettet har fire virtuelle nettverkskort, og alle er allerede i bruk. Derfor har VLAN 10 ikke en egen access-port på OVS.  
 
-**Nytt oppdatert vlan resultat, oppdatert den 10/30/2026 kl 19:27**  
+**Oppdatert VLAN Konfigurasjon, oppdatert den 10/30/2026**      
 Open vSwitch bruker en trunkforbindelse mot pfSense som transporterer VLAN 10, 20 og 30.
 
 VLAN 20 og VLAN 30 har egne access-porter på Open vSwitch. Opprinnelig manglet VLAN 10 en egen access-port fordi alle fire virtuelle nettverkskortene på OVS-VM-en allerede var i bruk. Ubuntu Server brukte derfor et eget VLAN-interface konfigurert med Netplan for å håndtere VLAN 10.
