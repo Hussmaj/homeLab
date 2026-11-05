@@ -6,4 +6,7 @@ Dette skyldes at OVS-VM-en i dette oppsettet har fire virtuelle nettverkskort, o
 
 ## Løsning
 
-Løsningen på dette var å bruke
+Gjennom brukergrensesnittet til VBox kan jeg maksimalt ta i bruk 4 NIC, men etter litt søking så fant jeg ut at jeg kan konfigurere 8 stk gjennom CLI til VBox som heter VboxMAnage. 
+
+Og da kunne jeg legge ett til nettverkskort som fikk navnet 'enp0s16', og den ble lagt til som en access-port på VLAN 10.   
+Deretter endret jeg nettverkskonfigurasjonen på Ubuntu Server til å bruke DHCP uten manuell VLAN-tagging i Netplan, og fjernet det gamle VLAN 10-grensesnittet.  
