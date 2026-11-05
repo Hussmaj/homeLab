@@ -1,9 +1,21 @@
 # Nettverk Hjemmelab
 
 Virtuell hjemmelab for praktisk læring innen nettverk, serverdrift og grunnleggende nettverkssikkerhet.  
-Labben er bygget med VirtualBox, pfSense og Open vSwitch. pfSense fungerer som gateway og brannmur, mens Ubuntu Server og Windows brukes som server- og klientmiljø.   
+Labben er bygget med Oracle VirtualBox, pfSense og Open vSwitch. pfSense fungerer som gateway og brannmur, mens Ubuntu Server og Windows brukes som server- og klientmiljø. 
 
-Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur og virtuelle nettverk.  
+Nettverket er delt inn i flere VLAN for å simulere et mer realistisk nettverksmiljø med separate soner for servere, klienter og DMZ.
+
+## Hva brukes labben til
+Prosjektet brukes til å konfigurere, teste og dokumentere ulike nettverksteknologier og sikkerhetsfunksjoner, blant annet:
+
+* VLAN og segmentering
+* Routing
+* DHCP
+* DNS
+* Brannmur og tilgangskontroll
+* DMZ
+* Apache web server
+* HTTP / HTTPS
 
 ## Arkitektur
 
@@ -11,25 +23,26 @@ Prosjektet brukes til å teste og dokumentere VLAN, routing, DHCP, DNS, brannmur
 *Figur 1: Arkitektur av Prosjektet.*
 
 ## Komponenter
-* VirtualBox – virtualisering og virtuelle nettverk  
-* pfSense – gateway, DHCP, DNS, routing og brannmur  
-* Open vSwitch – virtuell VLAN-switch  
-* Ubuntu Server – servermiljø og Apache  
-* Windows – klient og testing
-* VLAN / 802.1Q
+* Oracle VirtualBox – Virtualisering og virtuelle nettverk  
+* pfSense – Gateway, DHCP, DNS, routing og brannmur  
+* Open vSwitch – Virtuell VLAN-switch  
+* Ubuntu Server (VLAN 10) – Intern server i servernettverket
+* Ubuntu Server (DMZ / VLAN 30) – DMZ-server med Apache Web Server
+* Windows (VLAN 20) – Klientmiljø og testing
+* VLAN / 802.1Q - Nettverkssegmentering og VLAN-tagging
 
 ## IP Plan
 
 | Enhet | IP-adresse | Nettverk | Rolle |
 |---|---|---|---|
 | pfSense | `192.168.10.1` | LAN | Gateway |
-| OVS | `192.168.10.102` | LAN | Administrasjon |
+| OVS | `192.168.10.101` | LAN | Administrasjon |
 | pfSense | `192.168.20.1` | SERVERS | Gateway |
 | Ubuntu Server | `192.168.20.100` | SERVERS | Server |
 | pfSense | `192.168.30.1` | CLIENTS | Gateway |
 | Windows Client | `192.168.30.100` | CLIENTS | Klient |
 | pfSense | `192.168.40.1` | DMZ | Gateway |
-| Ubuntu DMZ | `192.168.40.101` | DMZ | DMZ-server |
+| Ubuntu DMZ | `192.168.40.10` | DMZ | DMZ-server |
 
 ## OVS-oppsett
 
