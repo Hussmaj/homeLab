@@ -29,3 +29,5 @@ Med Promiscuous Mode satt til Deny kunne VirtualBox begrense hvilke Ethernet-ram
 Etter at jeg endret Promiscuous Mode til Allow All, fungerte nettverkskommunikasjonen som forventet. Jeg kunne nå pinge gateway-adressen til DMZ-nettverket fra serveren.
 
 Dette viste hvor viktig det er å kontrollere de grunnleggende nettverksinnstillingene i VirtualBox når man bygger virtuelle nettverk med Open vSwitch.
+
+Den viktigste lærdommen jeg tok med meg fra denne erfaringen, var hvor viktig det er å feilsøke systematisk i stedet for å trekke forhastede konklusjoner. Jeg brukte mye tid på å undersøke DHCP-innstillingene, selv om det egentlige problemet lå i det virtuelle switch-layeren.
