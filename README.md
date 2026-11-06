@@ -45,7 +45,7 @@ Prosjektet brukes til å konfigurere, teste og dokumentere ulike nettverksteknol
 
 ## OVS-oppsett
 
-Open vSwitch brukes som den virtuelle VLAN-switchen i labben. OVS kobler pfSense sammen med server-, klient- og DMZ-nettverkene.
+Open vSwitch brukes som den virtuelle VLAN-switchen i labben. OVS kobler pfSense sammen med server, klient og DMZ-nettverkene.
 
 | Interface | Nettverk | Type | VLAN |
 |---|---|---|---:|
