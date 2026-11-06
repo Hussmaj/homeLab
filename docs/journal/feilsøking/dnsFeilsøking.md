@@ -2,6 +2,7 @@
 
 ## Problem
 
+Etter jeg har satt opp 
 DMZ-serveren hadde tilgang til internett, men klarte ikke å utføre DNS-oppslag. Jeg kunne pinge 8.8.8.8, men kommandoen nslookup vg.no fungerte ikke.
 
 ## Feilsøking
