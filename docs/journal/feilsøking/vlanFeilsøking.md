@@ -2,16 +2,23 @@
 
 ## Problem
 
-I mitt gamle VLAN oppsett hadde VLAN 20 og VLAN 30 har egne access-porter på Open vSwitch. Ubuntu Server på VLAN 10 brukte foreløpig et eget VLAN-interface konfigurert med Netplan.   
+I det gamle VLAN-oppsettet hadde VLAN 20 og VLAN 30 egne access-porter på Open vSwitch. Ubuntu Server i VLAN 10 brukte derimot et eget VLAN-interface konfigurert med Netplan.
 
-Dette skyldes at OVS-VM-en i dette oppsettet har fire virtuelle nettverkskort, og alle er allerede i bruk. Derfor hadde ikke VLAN 10 ikke en egen access-port på OVS. 
+Årsaken var at OVS-VM-en hadde fire virtuelle nettverkskort, og alle var allerede i bruk. Derfor hadde VLAN 10 ikke en egen access-port på Open vSwitch.
 
 ## Feilsøking
+
+* Jeg undersøkte nettverksoppsettet i VirtualBox og Open vSwitch.  
+* Jeg fant ut at VirtualBox sitt grafiske brukergrensesnitt begrenset oppsettet til 4 nettverkskort i min konfigurasjon.  
+* Jeg undersøkte alternative måter å legge til flere virtuelle nettverkskort på.  
+* Jeg fant ut at dette kunne gjøres gjennom kommandolinjeverktøyet VBoxManage, som støtter opptil 8 nettverkskort per virtuell maskin.  
 
 
 ## Løsning
 
-Gjennom brukergrensesnittet til VBox kan jeg maksimalt ta i bruk 4 NIC, men etter litt søking så fant jeg ut at jeg kan konfigurere 8 stk gjennom CLI til VBox som heter VboxMAnage. 
+Jeg brukte VBoxManage via CLI for å legge til et ekstra virtuelt nettverkskort på OVS-VM-en.
 
-Og da kunne jeg legge ett til nettverkskort som fikk navnet 'enp0s16', og den ble lagt til som en access-port på VLAN 10.   
-Deretter endret jeg nettverkskonfigurasjonen på Ubuntu Server til å bruke DHCP uten manuell VLAN-tagging i Netplan, og fjernet det gamle VLAN 10-grensesnittet.  
+Det nye nettverksgrensesnittet fikk navnet enp0s16 og ble konfigurert som en access-port på VLAN 10.
+
+Deretter endret jeg nettverkskonfigurasjonen på Ubuntu Server til å bruke DHCP uten manuell VLAN-tagging i Netplan. Det gamle VLAN 10-grensesnittet ble fjernet.
+
