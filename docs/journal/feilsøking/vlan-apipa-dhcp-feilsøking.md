@@ -2,7 +2,7 @@
 
 ## Problem
 
-II hjemmelabben satte jeg opp et nettverk bestående av en server, en klient og en router som kjører pfSense.
+I hjemmelabben satte jeg opp et nettverk bestående av en server, en klient og en router som kjører pfSense.
 
 Ubuntu Server var allerede konfigurert på VLAN 10 ved hjelp av Netplan. Jeg ønsket deretter å plassere Windows-klienten på VLAN 20. Først forsøkte jeg å konfigurere VLAN direkte på Windows-maskinen gjennom Device Manager, men dette fungerte ikke som forventet.
 
