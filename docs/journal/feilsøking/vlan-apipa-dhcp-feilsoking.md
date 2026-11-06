@@ -18,7 +18,7 @@ Min første antakelse var at problemet lå i DHCP-konfigurasjonen på pfSense. J
 
 Jeg brukte nesten to dager på å undersøke problemet. Til slutt bestemte jeg meg for å ta et steg tilbake og feilsøke nettverket mer systematisk, i stedet for å kontrollere de samme innstillingene gjentatte ganger.
 
-Jeg begynte å undersøke komponentene en etter en. Da oppdaget jeg at broen (br0) i Open vSwitch var nede.
+Jeg begynte å undersøke komponentene en etter en. Da oppdaget jeg at bridge (br0) i Open vSwitch var nede.
 
 Jeg hadde ikke forventet dette fordi Ubuntu-maskinen fortsatt kjørte. Jeg hadde antatt at den virtuelle switch-en også fungerte så lenge selve maskinen var startet. Jeg lærte at dette ikke nødvendigvis er tilfellet, og at nettverkskomponentene må kontrolleres separat.
 
