@@ -18,17 +18,15 @@ Min første antakelse var at problemet lå i DHCP-konfigurasjonen på pfSense. J
 
 Jeg brukte nesten to dager på å undersøke problemet. Til slutt bestemte jeg meg for å ta et steg tilbake og feilsøke nettverket mer systematisk, i stedet for å kontrollere de samme innstillingene gjentatte ganger.
 
-Jeg begynte å undersøke komponentene én etter én. Da oppdaget jeg at broen (br0) i Open vSwitch var nede.
+Jeg begynte å undersøke komponentene en etter en. Da oppdaget jeg at broen (br0) i Open vSwitch var nede.
 
 Jeg hadde ikke forventet dette fordi Ubuntu-maskinen fortsatt kjørte. Jeg hadde antatt at den virtuelle switch-en også fungerte så lenge selve maskinen var startet. Jeg lærte at dette ikke nødvendigvis er tilfellet, og at nettverkskomponentene må kontrolleres separat.
 
 ## Løsning
 
-Jeg aktiverte Open vSwitch-broen og kontrollerte at statusen var riktig.
+Jeg aktiverte Open vSwitch-broen(br0) og kontrollerte at statusen var riktig.
 
-Deretter gikk jeg tilbake til Windows-klienten og kjørte kommandoen:
-
-ipconfig /renew
+Deretter gikk jeg tilbake til Windows-klienten og kjørte kommandoen: `ipconfig /renew`
 
 Denne gangen fikk Windows-klienten tildelt IP-adressen jeg hadde konfigurert for VLAN 20.
 
