@@ -1,4 +1,4 @@
-# Feilsøkingslogg – DNS-problemer i DMZ
+# Feilsøking – DNS-problemer i DMZ
 
 ## Problem
 
