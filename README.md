@@ -8,7 +8,7 @@ Nettverket er delt inn i flere VLAN for å simulere et mer realistisk nettverksm
 ## Hva brukes labben til
 Prosjektet brukes til å konfigurere, teste og dokumentere ulike nettverksteknologier og sikkerhetsfunksjoner, blant annet:
 
-* VLAN og segmentering
+* VLAN og nettverkssegmentering (802.1Q)
 * Routing
 * DHCP
 * DNS
@@ -29,7 +29,6 @@ Prosjektet brukes til å konfigurere, teste og dokumentere ulike nettverksteknol
 * Ubuntu Server (VLAN 10) – Intern server i servernettverket
 * Ubuntu Server (DMZ / VLAN 30) – DMZ-server med Apache Web Server
 * Windows (VLAN 20) – Klientmiljø og testing
-* VLAN / 802.1Q - Nettverkssegmentering og VLAN-tagging
 
 ## IP Plan
 
