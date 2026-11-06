@@ -22,3 +22,7 @@ Det nye nettverksgrensesnittet fikk navnet enp0s16 og ble konfigurert som en acc
 
 Deretter endret jeg nettverkskonfigurasjonen på Ubuntu Server til å bruke DHCP uten manuell VLAN-tagging i Netplan. Det gamle VLAN 10-grensesnittet ble fjernet.
 
+## Resultat
+
+Ubuntu Server i VLAN 10 kunne nå kobles direkte til Open vSwitch gjennom en egen access-port.   
+Dette gjorde VLAN-oppsettet mer oversiktlig og likt oppsettet for VLAN 20 og VLAN 30.
