@@ -90,76 +90,52 @@ VLAN 20 og VLAN 30 har egne access-porter på Open vSwitch. Opprinnelig manglet 
 
 For å løse dette opprettet jeg et ekstra virtuelt nettverkskort på OVS-VM-en ved hjelp av VBoxManage via CLI. Det nye grensesnittet, enp0s16, ble lagt til som en access-port på VLAN 10. Deretter endret jeg nettverkskonfigurasjonen på Ubuntu Server til å bruke DHCP uten manuell VLAN-tagging i Netplan, og fjernet det gamle VLAN 10-grensesnittet.
 
-## Tjenester
-* DHCP
-* DNS
-* IPv4 routing
-* NAT
-* Firewall
-* Apache Web Server
 
+Brannmur og tilgangskontroll
+
+Begrensning av tilgang til pfSense sitt webgrensesnitt
+
+Administrasjon av pfSense er begrenset til LAN-adressen 192.168.10.1.
+
+Administrasjonen utføres fra Windows-klienten på CLIENTS-nettverket (192.168.30.100).
+
+Tilgang til pfSense sitt webgrensesnitt via gateway-adressene til SERVERS, CLIENTS og DMZ er blokkert.
 ## Brannmur regler
 
 ### Begrensning av tilgang til pfSense sitt webgrensesnitt
 
-* Tilgangen til pfSense sitt webgrensesnitt er konfigurert slik at administrasjon skjer via LAN-adressen 192.168.10.1/24.
+* Administrasjon av pfSense er begrenset til LAN-adressen 192.168.10.1.    
+* Administrasjonen utføres fra Windows-klienten på CLIENTS-nettverket (192.168.30.100).    
+* Tilgang til pfSense sitt webgrensesnitt via gateway-adressene til SERVERS, CLIENTS og DMZ er blokkert.    
 
-* Administrasjonen utføres fra Windows-klienten på CLIENTS-nettverket (192.168.30.0/24), med IP-adressen 192.168.30.100.
+### DMZ-Regler
 
-* Tilgangen via gateway-adressene til SERVERS (192.168.20.1), CLIENTS (192.168.30.1) og DMZ (192.168.40.1) er ikke tilgjengelig lenger. Jeg har begrenset dette slik at det er kun mulig og nå pfSense sitt webgrensesnitt via 192.168.10.1.
-
+* Tillater DMZ-serveren å kommunisere med internett.  
+* Blokkerer tilgang fra DMZ til interne nettverk (RFC1918).  
+* Tillater DMZ-serveren å bruke pfSense som DNS-server.  
+* Tillater tilgang fra CLIENTS til Apache-serveren i DMZ.  
 
 ## Feilsøking
 
-**Eksempler fra prosjektet:**
+### Eksempler på problemer som er undersøkt og løst under utviklingen av labben:
 
-* DHCP-problemer  
-* VLAN-tagging  
-* Trunk- og access-porter  
+* DHCP og DNS  
+* VLAN-tagging og trunk/access-porter  
 * Virtuelle nettverkskort  
-* Routing  
-* Brannmurregler  
-* Nettverksinterface som ikke var aktive
-* VirtualBox nettverksinnstillinger
-* Promiscuous Mode
+* Routing og brannmurregler  
+* VirtualBox nettverksinnstillinger  
+* Nettverksinterface og Promiscuous Mode  
 
-Detaljert feilsøking og løsninger dokumenteres i `docs/journal/feilsøking/` sammen med relevante kommandoer og resultater.
-
-## Status
-
-Labben fungerer og satt opp slik den er vist i Nettverksarkitekturen. 
+*Detaljert feilsøking dokumenteres i docs/journal/feilsøking/, sammen med relevante kommandoer og resultater.*
 
 ## Ferdig
+
 * VirtualBox-nettverk
 * pfSense gateway og brannmur
-* LAN
-* VLAN 10 / SERVERS
-* VLAN 20 / CLIENTS
-* VLAN 30 / DMZ
+* LAN og VLAN 10, 20 og 30
 * Open vSwitch
-* VLAN trunk
-* Access-port for klienter
-* Access-port for DMZ
-* Access-port for Servers
-* DHCP
-* Ubuntu DMZ
-* Apache Web Server
+* VLAN trunk og access-porter
+* DHCP og DNS
+* Ubuntu Server i VLAN 10
+* Ubuntu DMZ med Apache Web Server
 * Nettverkstesting og feilsøking
-
-## Teknologier
-
-* VirtualBox  
-* pfSense  
-* Open vSwitch  
-* Ubuntu Server
-* Ubuntu DMZ  
-* Windows   
-* VLAN/802.1Q  
-* IPv4  
-* DHCP  
-* DNS   
-* NAT  
-* Routing  
-* Firewall  
-* Apache  
-* Netplan  
